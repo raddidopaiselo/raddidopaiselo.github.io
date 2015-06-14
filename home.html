@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Raddi Do Paise Lo</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+	<!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+	<link href="css/datepicker.css" rel="stylesheet">
+	
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Raddi Do Paise Lo</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="index.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <header>
+		&nbsp;
+	</header>
+	<section id="userdetails">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span style="font-size:xx-large">Welcome, User</span>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-edit" title="edit"></span>
+				</div>
+			</div>
+			<div class="row">
+				&nbsp;
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">Schedule a Pick Up</h3>
+						</div>	
+						<div class="panel-body">
+							<form id="scheduleForm" action="home.html" validate>
+								<div class="input-group">
+									<input type="text" class="form-control date" size="20" placeholder="Click to Select a Date(YYYY-MM-DD)" readonly>
+									<span class="input-group-btn">
+										<button class="btn btn-info glyphicon glyphicon-ok" type="button"></button>
+									</span>
+								</div>
+								<br>
+								<div class="input-group">
+									<select class="form-control" style="width:49%">
+										<option value="">Frequency</option>	
+										<option value="W">Weekly</option>	
+										<option value="B">Bi-Weekly</option>	
+										<option value="T">Tri-Weekly</option>	
+										<option value="M">Monthly</option>	
+									</select>
+									<select class="form-control" style="width:49%;float:right">
+										<option value="">Day</option>	
+										<option value="1">Sunday</option>	
+										<option value="2">Monday</option>	
+										<option value="3">Tuesday</option>	
+										<option value="4">Wednesday</option>	
+										<option value="5">Thursday</option>	
+										<option value="6">Friday</option>	
+										<option value="7">Saturday</option>	
+									</select>
+								</div>
+								<br>
+								<table class="table">
+									<tr class="warning">
+										<th>No Scheduled Pick up</th>
+									</tr>
+								</table>
+								<table class="table table-bordered">
+									<tr class="success">
+										<th width="5%">No.</th>
+										<th>Schedule</th>
+										<th width="5%">&nbsp;</th>
+									</tr>
+									<tr>
+										<td>1.</td>
+										<td>2014-06-15</td>
+										<td><span class="btn btn-danger btn-xs glyphicon glyphicon-remove"></span></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Navi Mumbai<br>India, 410210</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About RaddiDoPaiseLo.com</h3>
+                        <p>We take any kind of scrap and redeem the value of your choice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; RaddiDoPaiseLo.com 2015
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+	<script>
+		$("#logoutButton").click(function(){
+			window.location = 'index.html'; 
+		});
+		$('.date').datepicker({
+			autoclose: true,
+			todayHighlight: true,
+			format: 'yyyy-mm-dd',
+			startDate: '0d',
+			clearBtn:true
+		});
+	</script>
+</body>
+
+</html>

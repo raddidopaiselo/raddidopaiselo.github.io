@@ -13,6 +13,7 @@
 	<!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
 	<link href="css/datepicker.css" rel="stylesheet">
+	<link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
 	
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -46,7 +47,7 @@
                         <a href="#page-top"></a>
                     </li>
 					<li class="page-scroll">
-                        <a href="#"><span class="glyphicon glyphicon-home" title="Logout"></span>&nbsp;Home</a>
+                        <a href="home.html"><span class="glyphicon glyphicon-home" title="Logout"></span>&nbsp;Home</a>
                     </li>
 					<li class="page-scroll">
 						<a href="index.html"><span class="glyphicon glyphicon-log-out" title="Logout"></span></a>
@@ -64,67 +65,116 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<span style="font-size:xx-large">Welcome, User</span>&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-edit" title="edit" id="editUser" style="cursor:pointer;"></span>
+					<span style="font-size:xx-large">Edit Details</span></span>
 				</div>
 			</div>
 			<div class="row">
 				&nbsp;
 			</div>
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<h3 class="panel-title">Schedule a Pick Up</h3>
-						</div>	
-						<div class="panel-body">
-							<form id="scheduleForm" action="home.html" validate>
+				<div class="col-lg-12">
+					<form>
+						<div class="row">
+							<div class="col-xs-6">
 								<div class="input-group">
-									<input type="text" class="form-control date" size="20" placeholder="Click to Select a Date(YYYY-MM-DD)" readonly>
-									<span class="input-group-btn">
-										<button class="btn btn-info glyphicon glyphicon-ok" type="button"></button>
-									</span>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+									<input type="text" class="form-control" placeholder="Name" id="txtName">
 								</div>
-								<br>
+							</div>
+							<div class="col-xs-6">
 								<div class="input-group">
-									<select class="form-control" style="width:49%">
-										<option value="">Frequency</option>	
-										<option value="W">Weekly</option>	
-										<option value="B">Bi-Weekly</option>	
-										<option value="T">Tri-Weekly</option>	
-										<option value="M">Monthly</option>	
-									</select>
-									<select class="form-control" style="width:49%;float:right">
-										<option value="">Day</option>	
-										<option value="1">Sunday</option>	
-										<option value="2">Monday</option>	
-										<option value="3">Tuesday</option>	
-										<option value="4">Wednesday</option>	
-										<option value="5">Thursday</option>	
-										<option value="6">Friday</option>	
-										<option value="7">Saturday</option>	
-									</select>
+									<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+									<input type="text" class="form-control" placeholder="Flat Number, Building Name" id="txtResidenceDetails">
 								</div>
-								<br>
-								<table class="table">
-									<tr class="warning">
-										<th>No Scheduled Pick up</th>
-									</tr>
-								</table>
-								<table class="table table-bordered">
-									<tr class="success">
-										<th width="5%">No.</th>
-										<th>Schedule</th>
-										<th width="5%">&nbsp;</th>
-									</tr>
-									<tr>
-										<td>1.</td>
-										<td>2014-06-15</td>
-										<td><span class="btn btn-danger btn-xs glyphicon glyphicon-trash"></span></td>
-									</tr>
-								</table>
-							</form>
+							</div>
 						</div>
-					</div>
+						<div class="row">&nbsp;</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
+									<input type="text" class="form-control" placeholder="Address Line 1" id="txtAddressLine1">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
+									<input type="text" class="form-control" placeholder="Address Line 2" id="txtAddressLine2">
+								</div>
+							</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+									<input type="text" class="form-control" placeholder="Phone Number" id="txtPhoneNumber">
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
+									<input type="text" class="form-control" placeholder="Alternate Phone Number" id="txtAltPhoneNumber">
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+									<input type="email" class="form-control" placeholder="Email" id="txtEmail">
+								</div>
+							</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<select class="form-control" id="selectCity">
+									<option>City</option>
+								</select>
+							</div>
+							<div class="col-xs-4">
+								<select class="form-control" id="selectState">
+									<option>State</option>
+								</select>
+							</div>
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-pushpin"></span></span>
+									<input type="text" class="form-control" placeholder="Pincode"  id="txtPincode">
+								</div>
+							</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-fw fa-twitter"></i></span>
+									<input type="text" class="form-control" placeholder="Twitter Id" id="txtTwitterId">
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-fw fa-facebook"></i></span>
+									<input type="text" class="form-control" placeholder="Facebook Id" id="txtFacebookId">
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-fw fa-google-plus"></i></span>
+									<input type="text" class="form-control" placeholder="Google Plus Id" id="txtGooglePlusId">
+								</div>
+							</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<button id="saveUserDetailsBtn" class="btn btn-primary pull-right" type="submit"><span class="glyphicon glyphicon-saved" title="Save"></span></button>
+								<button id="editUserDetailsBtn" class="btn btn-primary pull-right" type="submit" style="display:none"><span class="glyphicon glyphicon-pencil" title="Edit"></span></button>
+							</div>
+							<div class="col-xs-6">
+								<button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-floppy-remove" title="Cancel"></span></button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -205,9 +255,43 @@
 		$("#logoutButton").click(function(){
 			window.location = 'index.html'; 
 		});
-		$("#editUser").click(function(){
-			window.location = 'user_details.html'; 
+		
+		$("#saveUserDetailsBtn").click(function(){
+			$('input[id=txtName]').attr("disabled",true);
+			$('input[id=txtResidenceDetails]').attr("disabled",true);
+			$('input[id=txtAddressLine1]').attr("disabled",true);
+			$('input[id=txtAddressLine2]').attr("disabled",true);
+			$('input[id=txtPhoneNumber]').attr("disabled",true);
+			$('input[id=txtAltPhoneNumber]').attr("disabled",true);
+			$('input[id=txtEmail]').attr("disabled",true);
+			$('select[id=selectCity]').attr("disabled",true);
+			$('select[id=selectState]').attr("disabled",true);
+			$('input[id=txtPincode]').attr("disabled",true);
+			$('input[id=txtTwitterId]').attr("disabled",true);
+			$('input[id=txtFacebookId]').attr("disabled",true);
+			$('input[id=txtGooglePlusId]').attr("disabled",true);
+			$("#saveUserDetailsBtn").hide( "slow", function() {});
+			$("#editUserDetailsBtn").show( "slow", function() {});
 		});
+		
+		$("#editUserDetailsBtn").click(function(){
+			$('input[id=txtName]').attr("disabled",false);
+			$('input[id=txtResidenceDetails]').attr("disabled",false);
+			$('input[id=txtAddressLine1]').attr("disabled",false);
+			$('input[id=txtAddressLine2]').attr("disabled",false);
+			$('input[id=txtPhoneNumber]').attr("disabled",false);
+			$('input[id=txtAltPhoneNumber]').attr("disabled",false);
+			$('input[id=txtEmail]').attr("disabled",false);
+			$('select[id=selectCity]').attr("disabled",false);
+			$('select[id=selectState]').attr("disabled",false);
+			$('input[id=txtPincode]').attr("disabled",false);
+			$('input[id=txtTwitterId]').attr("disabled",false);
+			$('input[id=txtFacebookId]').attr("disabled",false);
+			$('input[id=txtGooglePlusId]').attr("disabled",false);
+			$("#saveUserDetailsBtn").show( "slow", function() {});
+			$("#editUserDetailsBtn").hide( "slow", function() {});
+		});
+		
 		$('.date').datepicker({
 			autoclose: true,
 			todayHighlight: true,

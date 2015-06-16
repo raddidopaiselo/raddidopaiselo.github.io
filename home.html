@@ -71,29 +71,58 @@
 				&nbsp;
 			</div>
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-md-5">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
-							<h3 class="panel-title">Schedule a Pick Up</h3>
+							<h3 class="panel-title">Schedule One Time Pick Up</h3>
 						</div>	
 						<div class="panel-body">
 							<form id="scheduleForm" action="home.html" validate>
 								<div class="input-group">
 									<input type="text" class="form-control date" size="20" placeholder="Click to Select a Date(YYYY-MM-DD)" readonly>
 									<span class="input-group-btn">
-										<button class="btn btn-info glyphicon glyphicon-ok" type="button"></button>
+										<button class="btn btn-info glyphicon glyphicon-ok" title="Save" type="button"></button>
 									</span>
 								</div>
 								<br>
+								<table class="table">
+									<tr class="warning">
+										<th>No Scheduled Pick up</th>
+									</tr>
+								</table>
+								<table class="table table-bordered">
+									<tr class="success">
+										<th width="5%">No.</th>
+										<th>Schedule</th>
+										<th width="5%">&nbsp;</th>
+									</tr>
+									<tr>
+										<td>1.</td>
+										<td>2014-06-15</td>
+										<td><span class="btn btn-danger btn-xs glyphicon glyphicon-trash"></span></td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1">&nbsp;</div>
+				<div class="col-md-5">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">Schedule Pick Up at Regular Intervals</h3>
+						</div>	
+						<div class="panel-body">
+							<form id="scheduleForm" action="home.html" validate>
 								<div class="input-group">
-									<select class="form-control" style="width:49%">
+									<select class="form-control" style="width:40%">
 										<option value="">Frequency</option>	
 										<option value="W">Weekly</option>	
 										<option value="B">Bi-Weekly</option>	
 										<option value="T">Tri-Weekly</option>	
 										<option value="M">Monthly</option>	
 									</select>
-									<select class="form-control" style="width:49%;float:right">
+									<select class="form-control" style="margin-left:10px;width:30%;">
 										<option value="">Day</option>	
 										<option value="1">Sunday</option>	
 										<option value="2">Monday</option>	
@@ -103,6 +132,7 @@
 										<option value="6">Friday</option>	
 										<option value="7">Saturday</option>	
 									</select>
+									<button type="submit" class="btn btn-info" style="margin-left:10px;">Schedule</button>
 								</div>
 								<br>
 								<table class="table">
@@ -127,6 +157,7 @@
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</section>
 	

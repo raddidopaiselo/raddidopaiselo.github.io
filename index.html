@@ -72,15 +72,6 @@
             <div class="row">
                 <div class="col-lg-6">
                     <img class="img-responsive" src="img/profile.png" alt="">
-					<!--
-                    <div class="intro-text">
-                        <span class="name">Want to get your scrap picked?</span>
-                        <hr class="star-light">
-                        <span class="skills">
-							<input type="text" name="phonenumber" placeholder="Enter your mobile number..">
-						</span>
-                    </div>
-					-->
                 </div>
 				<div class="col-lg-6">
 					<div class="panel panel-primary">
@@ -94,12 +85,29 @@
 								</span>
 								<input type="text" maxlength="10" class="form-control" placeholder="Please enter your Mobile Number">
 								<span class="input-group-btn">
-									<button class="btn btn-info glyphicon glyphicon-send" type="button"></button>
+									<button id="registerBtn" class="btn btn-info glyphicon glyphicon-send" type="button"></button>
 								</span>
 							</div>
 						</div>
 					</div>
-                    
+                </div>
+				<div class="col-lg-6">
+					<p class="text-center"><strong>OR</strong></p>
+                </div>
+				<div class="col-lg-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">SMS from your Registered Mobile Number</h3>
+					</div>	
+					<div class="panel-body">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<span class="btn btn-primary glyphicon glyphicon-phone"></span>
+							</span>
+							<input type="text" maxlength="10" class="form-control" placeholder="PICKUP to 999999" readonly>
+						</div>
+					</div>
+				</div>	
                 </div>
             </div>
         </div>
@@ -502,6 +510,9 @@
 			autoclose: true,
 			todayHighlight: true,
 			format: 'yyyy-mm-dd',
+		});
+		$("#registerBtn").click(function(){
+			window.location = 'user_details.html'; 
 		});
 	</script>
 

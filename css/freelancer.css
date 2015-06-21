@@ -31,9 +31,9 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
+    text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: normal;
 }
 
 hr.star-light,
@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #9B92EA;
+    background: #60BF78;
 }
 
 header .container {
@@ -99,7 +99,9 @@ header .intro-text .name {
     display: block;
     #text-transform: uppercase;
 	text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    #font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
     font-size: 2em;
     font-weight: 500;
 }
@@ -149,9 +151,10 @@ header .intro-text .skills {
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    text-transform: none;
+    #font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
 }
 
 .navbar a:focus {
@@ -172,7 +175,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    padding: 10px 0 40px 0;
 }
 
 section h2 {

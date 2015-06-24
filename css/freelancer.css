@@ -465,3 +465,106 @@ footer .footer-below {
 .modal-dialog-center {
     margin-top: 10%;
 }
+
+.icon{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    display:block;
+}
+
+/*The Artifakt ;)*/
+.calculator{
+    width:8.5em;
+    height:9.5em;
+    background:green;
+    border-radius:0.4em;
+}
+.calculator:before{
+    content:"";
+    position:absolute;
+    top:0.5em;
+    left:0.5em;
+    width:7.5em;
+    height:2em;
+    background:#3DC0F1;
+    z-index:2;
+    border-radius:0.2em;
+}
+.calculator:after{
+    content:"";
+    position:absolute;
+    top:3.5em;
+    left:0.5em;
+    width:1.5em;
+    height:1.5em;
+    background:#3DC0F1;
+    border-radius:0.2em;
+    box-shadow:
+    2em 0 #3DC0F1,
+    4em 0 #3DC0F1,
+    6em 0 #3DC0F1,
+    0 2em #3DC0F1,
+    2em 2em #3DC0F1,
+    4em 2em #3DC0F1,
+    6em 2em #3DC0F1,
+    0em 4em #3DC0F1,
+    2em 4em #3DC0F1,
+    4em 4em #3DC0F1,
+    6em 3em #3DC0F1,
+    6em 4em #3DC0F1;
+
+}
+
+.text-important {
+  color: darkred;
+}
+
+.btn-important {
+  color: #ffffff;
+  background-color: darkred;
+  border-color: transparent;
+}
+.btn-important:hover,
+.btn-important:focus,
+.btn-important.focus,
+.btn-important:active,
+.btn-important.active,
+.open > .dropdown-toggle.btn-important {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-important:active,
+.btn-important.active,
+.open > .dropdown-toggle.btn-important {
+  background-image: none;
+}
+.btn-important.disabled,
+.btn-important[disabled],
+fieldset[disabled] .btn-important,
+.btn-important.disabled:hover,
+.btn-important[disabled]:hover,
+fieldset[disabled] .btn-important:hover,
+.btn-important.disabled:focus,
+.btn-important[disabled]:focus,
+fieldset[disabled] .btn-important:focus,
+.btn-important.disabled.focus,
+.btn-important[disabled].focus,
+fieldset[disabled] .btn-important.focus,
+.btn-important.disabled:active,
+.btn-important[disabled]:active,
+fieldset[disabled] .btn-important:active,
+.btn-important.disabled.active,
+.btn-important[disabled].active,
+fieldset[disabled] .btn-important.active {
+  background-color: darkred;
+  border-color: transparent;
+}
+.btn-important .badge {
+  color: darkred;
+  background-color: #ffffff;
+}

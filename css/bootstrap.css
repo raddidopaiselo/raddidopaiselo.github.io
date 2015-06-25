@@ -1340,10 +1340,12 @@ mark,
   color: #98978b;
 }
 .text-primary {
-  color: #005952;
+  #color: #005952;
+  color: rgb(25, 77, 25);
 }
 a.text-primary:hover {
-  color: #005952;
+  #color: #005952;
+  color: rgb(25, 77, 25);
 }
 .text-success {
   color: #93c54b;

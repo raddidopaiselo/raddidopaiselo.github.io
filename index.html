@@ -17,6 +17,8 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link async href="http://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,7 +28,7 @@
 </head>
 <body id="page-top" class="index">
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:rgb(195, 250, 182);">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -44,11 +46,12 @@
 				<button type="button" class="navbar-toggle btn btn-primary" data-toggle="modal" data-target=".bs-login-modal-lg">
 					<span class="fa fa-fw fa-key">&nbsp;</span>
                 </button>
-                <img class="pull-left" src="img/profile_small.png" style="width:50px" alt="">
+                <img class="pull-left visible-md visible-lg img-responsive" src="img/Banner_small.png" style="height:75px;width:220px;margin-left:10px;" alt="">
+                <img class="pull-left visible-xs visible-sm img-responsive" src="img/Banner_small.png" style="height:60px;width:220px;margin-left:10px;" alt="">
 				<!--<img class="hidden-lg hidden-md pull-left" src="img/profile_small.png" style="width:50px" alt="">-->
 				<!--<img class="hidden-xs hidden-sm pull-left" src="img/logo_name_small_wo_bg.png" style="height:70px" alt="">-->
-				<a class="navbar-brand hidden-lg hidden-md" style="padding:20px;" href="#page-top"><strong>RADDI</strong> <i>Do</i> <strong>PAISE</strong> <i>Lo</i></a>
-				<a class="navbar-brand hidden-xs hidden-sm" href="#page-top"><strong>RADDI</strong> <i>Do</i> <strong>PAISE</strong> <i>Lo</i></a>
+				<!--<a class="navbar-brand hidden-lg hidden-md" style="padding:20px;" href="#page-top"><strong>RADDI</strong> <i>Do</i> <strong>PAISE</strong> <i>Lo</i></a>-->
+				<!--<a class="navbar-brand hidden-xs hidden-sm" href="#page-top"><strong>RADDI</strong> <i>Do</i> <strong>PAISE</strong> <i>Lo</i></a>-->
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,38 +72,50 @@
         <!-- /.container-fluid -->
     </nav>
     <!-- Header -->
-    <header>
+    <header style="background-color:rgba(248, 247, 216, 0.7);background-image:url('img/doodle.png');">
         <div class="container" style="border:0px solid darkgreen;padding-top:15%;padding-bottom:10px">
         	<div class="row" style="border:0px solid red;">
-        		<div class="col-md-3 visible-md visible-lg" style="border:0px solid blue;padding:5px 5px 10px 5px">
-        			<div>
-        				<!--<img class="img-responsive" src="img/logo_name_small_wo_bg.png" style="height:256px;width:200px;" alt="">-->
-        				<img class="img-responsive" src="img/profile.png" alt="logo">
-        			</div>
+        		<div class="col-md-3 visible-md visible-lg text-center" style="border:0px solid blue;padding:5px 5px 10px 5px">
         			<div style="margin-top:3%">
-        				<h4 class="text-important text-uppercase">Register with us today</h4>
-        				<h2 class="text-important text-uppercase">Earn <span class="fa fa-rupee">&nbsp;</span>500<sup>*</sup></h2>
+        				<!--<h4 class="text-important text-uppercase">Register with us today</h4>
+        				<h2 class="text-important text-uppercase">Earn <span class="fa fa-rupee">&nbsp;</span>500<sup>*</sup></h2>-->
+        				<img class="img-responsive" src="img/Banner_Register.png" alt="">
+        			</div>
+        			<div style="border-radius:5px;border:0px solid red;background-color:white;padding:1%;margin:auto 5%;">
+        				<h4 class="text-important text-uppercase"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Free Coupons + Extra <span class="fa fa-rupee text-important">&nbsp;</span>against scrap</h3>
+	        			<h4 class="text-primary">Reach Us</h3>
+	        			<h4 class="text-primary">with a Missed Call on</h3>
+	        			<h4 class="text-primary"><span class="glyphicon glyphicon-earphone"></span>&nbsp;+91&nbsp;&nbsp;9898989898<sup><small class="text-primary">#</small></sup></h3>
+	        			<h4 class="text-primary"><span class="glyphicon glyphicon-phone"></span>&nbsp;SMS PICKUP to 9898989898<sup><small class="text-primary">#</small></sup></h3>
+	        			<h6 class="text-uppercase"><small class="text-primary">#&nbsp;from your Registered Number</small></h6>
         			</div>
         		</div>
-        		<div class="col-md-3 visible-xs visible-sm" style="display:flex;border:0px solid blue;padding:5px 5px 10px 5px;margin-top:4%;margin-bottom:7%;">
-        			<div style="border:0px solid red;margin-left:5%" class="img-responsive pull-left">
-        				<img src="img/profile.png" style="height:120px;width:120px;" alt="logo">
-        			</div>
-        			<div>
+        		<div class="col-md-3 visible-sm visible-xs text-center" style="border:0px solid blue;padding:5px 5px 10px 5px;">
+        			<div style="margin-top:6%">
         				<h4 class="text-important text-uppercase">Register with us today</h4>
         				<h2 class="text-important text-uppercase">Earn <span class="fa fa-rupee">&nbsp;</span>500<sup>*</sup></h2>
         			</div>
         		</div>
         		<div class="col-md-6" style="border:0px solid blue;">
+        			<div style="border-radius:5px;border:0px solid red;background-color:transparent;padding:1%;margin:auto 5%;">
+        				<img class="img-responsive" src="img/MainContent.png" style="height:250px;width:400px;">
+        			</div>
+        			<!-- <div style="border-radius:5px;border:0px solid red;background-color:rgb(195, 250, 182);padding:1%;margin:auto 5%;">
+        				<h3 class="text-important text-uppercase text-center"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Best way to sell scrap</h3><br>
+	        			<h4 class="text-primary text-uppercase" style="padding-left:45px;"><span class="bg-warning">1. Reach Us, Sell Scrap</span></h3>
+	        			<h4 class="text-primary text-uppercase" style="padding-left:45px;"><span class="bg-danger">2. Get Extra Cash + Free Coupons</span></h3>
+	        			<h4 class="text-primary text-uppercase" style="padding-left:45px;"><span class="bg-info">3. Or Get Vouchers & Many offers</span></h3>
+        			</div> -->
+					<!--
         			<div style="border-radius:5px;border:0px solid red;background-color:rgba(248, 247, 216, 0.7);padding:1%;margin:auto 5%;background-image:url('img/doodle.png');">
-        				<!--<h3 class="text-important text-uppercase"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Want to sell scrap?</h3>-->
         				<h3 class="text-important text-uppercase"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Free Coupons + Extra <span class="fa fa-rupee text-important">&nbsp;</span>against scrap</h3>
 	        			<h3 class="text-primary">Avail it with a Missed Call</h3>
 	        			<h3 class="text-primary"><span class="glyphicon glyphicon-earphone"></span>&nbsp;+91&nbsp;&nbsp;9898989898<sup><small class="text-primary">#</small></sup></h3>
 	        			<h3 class="text-primary"><span class="glyphicon glyphicon-phone"></span>&nbsp;SMS PICKUP to 9898989898<sup><small class="text-primary">#</small></sup></h3>
 	        			<h6 class="text-uppercase"><small class="text-primary">#&nbsp;from your Registered Number</small></h6>
         			</div>
-        			<div style="border-radius:5px;border:0px solid red;background-color:white;padding:1%;margin:5%">
+        			-->
+        			<div class="text-center" style="border-radius:5px;border:0px solid red;background-color:white;padding:1%;margin:5%">
         				<div>
         					<h4 class="text-primary text-uppercase"><i>Get More on every consecutive deal</i></h4>
         				</div>
@@ -112,7 +127,39 @@
 	        			</div>
         			</div>
         		</div>
-        		<div class="col-md-3" style="border:0px solid blue;">
+        		<!--
+        		<div class="col-md-6 visible-sm visible-xs" style="border:0px solid blue;">
+        			<div style="border-radius:5px;border:0px solid red;background-color:rgb(195, 250, 182);padding:1%;margin:auto 5%;">
+        				<h4 class="text-important text-uppercase text-center"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Best way to sell scrap</h3>
+	        			<h5 class="text-primary text-uppercase" style="padding-left:45px;"><span class="bg-warning">1. Reach Us and Sell Scrap</span></h3>
+	        			<h5 class="text-primary text-uppercase" style="padding-left:45px;"><span class="bg-warning">2. Get Extra Cash + Free Coupons</span></h3>
+	        			<h5 class="text-primary text-uppercase" style="padding-left:45px;"><span class="bg-warning">3. Or Get Vouchers & Many offers</span></h3>
+        			</div>
+        			-->
+					<!--
+        			<div style="border-radius:5px;border:0px solid red;background-color:rgba(248, 247, 216, 0.7);padding:1%;margin:auto 5%;background-image:url('img/doodle.png');">
+        				<h3 class="text-important text-uppercase"><span class="glyphicon glyphicon-bullhorn">&nbsp;</span>Free Coupons + Extra <span class="fa fa-rupee text-important">&nbsp;</span>against scrap</h3>
+	        			<h3 class="text-primary">Avail it with a Missed Call</h3>
+	        			<h3 class="text-primary"><span class="glyphicon glyphicon-earphone"></span>&nbsp;+91&nbsp;&nbsp;9898989898<sup><small class="text-primary">#</small></sup></h3>
+	        			<h3 class="text-primary"><span class="glyphicon glyphicon-phone"></span>&nbsp;SMS PICKUP to 9898989898<sup><small class="text-primary">#</small></sup></h3>
+	        			<h6 class="text-uppercase"><small class="text-primary">#&nbsp;from your Registered Number</small></h6>
+        			</div>
+        			-->
+        			<!--
+        			<div class="text-center" style="border-radius:5px;border:0px solid red;background-color:white;padding:1%;margin:5%">
+        				<div>
+        					<h4 class="text-primary text-uppercase"><i>Get More on every consecutive deal</i></h4>
+        				</div>
+	        			<div style="display:flex;border:0px solid black;">
+	        				<div style="font-size:20px;vertical-align:middle" class="center-block"><span class="fa fa-rupee text-important">&nbsp;</span></div>
+	        				<div style="font-size:30px;vertical-align:middle" class="center-block"><span class="fa fa-rupee text-important">&nbsp;</span></div>
+	        				<div style="font-size:40px;vertical-align:middle" class="center-block"><span class="fa fa-rupee text-important">&nbsp;</span></div>
+	        				<div style="font-size:50px;vertical-align:middle" class="center-block"><span class="fa fa-rupee text-important">&nbsp;</span></div>
+	        			</div>
+        			</div>
+        		</div>
+        		-->
+        		<div class="col-md-3 text-center" style="border:0px solid blue;">
         			<div>
         				<div class="panel panel-primary">
 	        				<div class="panel-heading"><h5 class="text-uppercase">Scrap Value Calculator</h4></div>

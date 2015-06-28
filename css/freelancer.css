@@ -80,14 +80,14 @@ hr.star-primary:after {
 }
 
 header {
-    text-align: center;
+    #text-align: center;
     color: #fff;
-    background: #60BF78;
+    #background: #60BF78;
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 header img {
@@ -113,8 +113,8 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     header .intro-text .name {
@@ -568,3 +568,11 @@ fieldset[disabled] .btn-important.active {
   color: darkred;
   background-color: #ffffff;
 }
+
+.carousel-inner {
+  position: relative;
+  /*overflow: hidden;*/
+  width: 100%;
+}
+
+

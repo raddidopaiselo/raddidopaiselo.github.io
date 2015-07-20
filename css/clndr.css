@@ -40,7 +40,7 @@
 	}
 	#full-clndr .clndr-controls .clndr-previous-button:hover,
 	#full-clndr .clndr-controls .clndr-next-button:hover {
-	  opacity: 0.5;
+	  opacity: 1;
 	}
 	#full-clndr .clndr-grid {
 	  float: left;

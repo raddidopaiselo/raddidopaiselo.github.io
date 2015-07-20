@@ -74,8 +74,8 @@
 				<div id="full-clndr" class="visible-lg visible-md clearfix">
 				  <script type="text/template" id="full-clndr-template">
 					<div class="clndr-controls">
-					  <div class="clndr-previous-button" title="Previous month">&lt;</div>
-					  <div class="clndr-next-button" title="Next month">&gt;</div>
+					  <div class="clndr-previous-button" title="Previous month"><span class="fa fa-2x fa-minus-circle"></span></div>
+					  <div class="clndr-next-button" title="Next month"><span class="fa fa-2x fa-plus-circle"></span></div>
 					  <div class="current-month" style="font-size:24px;text-transform:uppercase;"><%= month %> <%= year %></div>
 					</div>
 					<div class="clndr-grid">
@@ -91,7 +91,7 @@
 					  </div>
 					</div>
 					<div class="event-listing">
-					  <div class="event-listing-title">PICKUPS THIS MONTH</div>
+					  <div class="event-listing-title">YOUR PICKUPS THIS MONTH</div>
 					  <% _.each(eventsThisMonth, function(event) { %>
 						  <div class="event-item" style="display:flex;">
 						  	<div style="width:89%">
@@ -270,13 +270,22 @@
 		$("#registerBtn").click(function(){
 			window.location = 'user_details.html'; 
 		});
+		
+		$(".today").click(function(){ alert('here')});
+
+		$(".day").click(function() {
+		  $( this ).slideUp();
+		});
+		/*
 		$( document ).ready(function() {
+			
     		$('.day').addClass('hvr-border-fade');
 			$('.past').removeClass('hvr-border-fade');
 			$('.past').addClass('hvr-round-corners');
 			$('.event-item').addClass('hvr-underline-reveal');
+			
 		});
-		
+		*/		
 	</script>
 
 </body>

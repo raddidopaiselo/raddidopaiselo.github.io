@@ -284,6 +284,42 @@
 	  -moz-box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
 	}
+
+	.hide-clndr-grid {
+		display:none;
+	}
+
+	.show-clndr-grid {
+		display:block;
+	}
+
+	.add-schedule {
+	  float: left;
+	  width: 61.55%;
+	  height: 98%;
+	  border: 2px solid white;
+	  border-radius: 7px;
+	  margin: 20px 20px;
+	  background-color:#C3FAB6;
+	}
+
+	.add-schedule-day {
+		background-color: #005952;
+  		text-align: center;
+  		color: white;
+  		letter-spacing: 1px;
+  		border-top-right-radius: inherit;
+  		border-top-left-radius: inherit;	
+  	}
+
+	.show-add-schedule{
+		display:block;
+	}
+	
+	.hide-add-schedule{
+		display:none;
+	}
+
 	/*
 	body {
 	  font-family: Inconsolata, Monaco, 'Andale Mono', Courier;

@@ -78,7 +78,7 @@
 					  <div class="clndr-next-button" title="Next month"><span class="fa fa-2x fa-plus-circle fa-rotate-180 hvr-grow"></span></div>
 					  <div class="current-month" style="font-size:24px;text-transform:uppercase;"><%= month %> <%= year %></div>
 					</div>
-					<div class="clndr-grid">
+					<div class="clndr-grid show-clndr-grid">
 					  <div class="days-of-the-week clearfix">
 						<% _.each(daysOfTheWeek, function(day) { %>
 						  <div class="header-day"><%= day %></div>
@@ -89,6 +89,43 @@
 						  <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div>
 						<% }); %>
 					  </div>
+					</div>
+					<div class="add-schedule hide-add-schedule">
+						<div class="add-schedule-day" style="width:100%;border-bottom:3px solid white;text-align:center;padding-top:20px;padding-bottom:20px;">
+							<span class="fa fa-3x">25 July</span>
+						</div>
+						<div style="display:flex;margin-top:15px;">
+							<div style="width:40%;text-align:center"><span class="fa fa-1x" style="color:#005952;font-weight:700;">Address</span></div>
+							<div class="form-group"><input class="form-control" type="text"></div>
+						</div>
+						<div style="display:flex;margin-top:5px;">
+							<div style="width:40%;text-align:center"><span>&nbsp;</span></div>
+							<div class="form-group"><input class="form-control" type="text"></div>
+						</div>
+						<div style="display:flex;margin-top:5px;">
+							<div style="width:40%;text-align:center"><span>&nbsp;</span></div>
+							<div class="form-group"><input class="form-control" type="text"></div>
+						</div>
+						<div style="display:flex;margin-top:5px;">
+							<div style="width:40%;text-align:center"><span class="fa fa-1x" style="color:#005952;font-weight:700;">Time</span></div>
+							<div class="form-group"><input class="form-control" type="text"></div>
+						</div>
+						<div style="display:flex;margin-top:5px;">
+							<div style="width:40%;text-align:center"><span class="fa fa-1x" style="color:#005952;font-weight:700;">Type Of Pickup</span></div>
+							<div>
+								<select>
+									<option value="">Select..</option>
+									<option value="1">One Time Pickup</option>
+									<option value="2">Weekly Pickup</option>
+									<option value="3">Bi-Weekly Pickup</option>
+									<option value="4">Monthly Pickup</option>
+								</select>
+							</div>
+						</div>
+						<div style="width:100%;text-align:center;padding-top:20px;padding-bottom:20px;">
+							<button class="btn btn-primary add" type="submit" value="Add">Add</button>
+							<button class="btn btn-default cancel" type="button" value="Cancel">Cancel</button>
+						</div>
 					</div>
 					<div class="event-listing">
 					  <div class="event-listing-title">YOUR PICKUPS THIS MONTH</div>
@@ -106,8 +143,10 @@
 						  </div>
 						<% }); %>
 					</div>
+					
 				  </script>
 				</div>
+				<!--
 				<div id="full-clndr-sm" class="visible-xs visible-sm clearfix">
 				  <script type="text/template" id="full-clndr-sm-template">
 					<div class="clndr-controls col-md-12">
@@ -138,6 +177,7 @@
 					</div>
 				  </script>
 				</div>
+				-->
 			</div>
         </div>
     </header>
@@ -259,33 +299,77 @@
 	<script src="js/clndr/site.js" type="text/javascript"></script>
 
 	<script>
-		$("#loginButton").click(function(){
-			window.location = 'home.html'; 
-		});
-		$('.date').datepicker({
-			autoclose: true,
-			todayHighlight: true,
-			format: 'yyyy-mm-dd',
-		});
-		$("#registerBtn").click(function(){
-			window.location = 'user_details.html'; 
-		});
-		
-		$(".today").click(function(){ alert('here')});
 
+		/*
 		$(".day").click(function() {
 		  $( this ).slideUp();
 		});
-		/*
+
+		*/		
+
 		$( document ).ready(function() {
+
+			$("#loginButton").click(function(){
+				window.location = 'home.html'; 
+			});
+			$('.date').datepicker({
+				autoclose: true,
+				todayHighlight: true,
+				format: 'yyyy-mm-dd',
+			});
+			$("#registerBtn").click(function(){
+				window.location = 'user_details.html'; 
+			});
 			
+			$('.day').on('click',function(){
+
+				if(!$(this).hasClass('past')){
+					if ($(".clndr-grid").hasClass("hide-clndr-grid")) {
+						$('.clndr-grid').removeClass('hide-clndr-grid');
+						$('.clndr-grid').addClass('show-clndr-grid');
+					} else if ($(".clndr-grid").hasClass("show-clndr-grid")) {
+						$('.clndr-grid').removeClass('show-clndr-grid');
+						$('.clndr-grid').addClass('hide-clndr-grid');
+					}
+					
+					if ($(".add-schedule").hasClass("hide-add-schedule")) {
+						$('.add-schedule').removeClass('hide-add-schedule');
+						$('.add-schedule').addClass('show-add-schedule')
+					} else if ($(".add-schedule").hasClass("show-add-schedule")) {
+						$('.add-schedule').removeClass('show-add-schedule');
+						$('.add-schedule').addClass('hide-add-schedule')
+					}
+				}
+
+				
+			});
+
+
+			$('.add').on('click',function(){
+				$('.day').click();	
+			});
+
+			$('.cancel').on('click',function(){
+				if ($(".add-schedule").hasClass("show-add-schedule")) {
+					$('.add-schedule').removeClass('show-add-schedule');
+					$('.add-schedule').addClass('hide-add-schedule')
+				}
+
+				if ($(".clndr-grid").hasClass("hide-clndr-grid")) {
+					$('.clndr-grid').removeClass('hide-clndr-grid');
+					$('.clndr-grid').addClass('show-clndr-grid');
+				}
+			});
+
+			
+    		/*
     		$('.day').addClass('hvr-border-fade');
 			$('.past').removeClass('hvr-border-fade');
 			$('.past').addClass('hvr-round-corners');
 			$('.event-item').addClass('hvr-underline-reveal');
+			*/
 			
 		});
-		*/		
 	</script>
 
 </body>

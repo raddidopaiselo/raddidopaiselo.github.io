@@ -15,6 +15,7 @@
 	<link href="css/datepicker.css" rel="stylesheet">
 	<link href="css/hover-min.css" rel="stylesheet">
 	<link href="css/clndr.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -49,10 +50,10 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-					<li class="page-scroll" data-toggle="modal" data-target=".bs-register-modal-lg">
+					<li class="page-scroll hvr-underline-from-center" data-toggle="modal" data-target=".bs-register-modal-lg">
                         <a href="#"><span style="font-size:20px;" class="fa fa-fw fa-home"></span>&nbsp;<strong style="font-size:20px;">Home</strong></a>
                     </li>
-					<li class="page-scroll" data-toggle="modal" data-target=".bs-login-modal-lg">
+					<li class="page-scroll hvr-underline-from-center" data-toggle="modal" data-target=".bs-login-modal-lg">
                         <a href="#"><span style="font-size:20px;" class="fa fa-fw fa-power-off"></span>&nbsp;<strong  style="font-size:20px;">Logout</strong></a>
                     </li>
                 </ul>
@@ -71,12 +72,12 @@
         	</div>
         	<div class="row">&nbsp;</div>
         	<div class="row">
-				<div id="full-clndr" class="visible-lg visible-md clearfix">
+				<div id="full-clndr" class="clearfix">
 				  <script type="text/template" id="full-clndr-template">
 					<div class="clndr-controls">
 					  <div class="clndr-previous-button" title="Previous month"><span class="fa fa-2x fa-minus-circle fa-rotate-180 hvr-grow"></span></div>
 					  <div class="clndr-next-button" title="Next month"><span class="fa fa-2x fa-plus-circle fa-rotate-180 hvr-grow"></span></div>
-					  <div class="current-month" style="font-size:24px;text-transform:uppercase;"><%= month %> <%= year %></div>
+					  <div class="current-month" style="font-size:24px;text-transform:uppercase;"><span id="month-name"><%= month %></span>&nbsp;<%= year %></div>
 					</div>
 					<div class="clndr-grid show-clndr-grid">
 					  <div class="days-of-the-week clearfix">
@@ -86,45 +87,112 @@
 					  </div>
 					  <div class="days">
 						<% _.each(days, function(day) { %>
-						  <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div>
+						  <div class="<%= day.classes %> top-to-down" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div>
 						<% }); %>
 					  </div>
 					</div>
-					<div class="add-schedule hide-add-schedule">
-						<div class="add-schedule-day" style="width:100%;border-bottom:3px solid white;text-align:center;padding-top:20px;padding-bottom:20px;">
-							<span class="fa fa-3x">25 July</span>
-						</div>
-						<div style="display:flex;margin-top:15px;">
-							<div style="width:40%;text-align:center"><span class="fa fa-1x" style="color:#005952;font-weight:700;">Address</span></div>
-							<div class="form-group"><input class="form-control" type="text"></div>
-						</div>
-						<div style="display:flex;margin-top:5px;">
-							<div style="width:40%;text-align:center"><span>&nbsp;</span></div>
-							<div class="form-group"><input class="form-control" type="text"></div>
-						</div>
-						<div style="display:flex;margin-top:5px;">
-							<div style="width:40%;text-align:center"><span>&nbsp;</span></div>
-							<div class="form-group"><input class="form-control" type="text"></div>
-						</div>
-						<div style="display:flex;margin-top:5px;">
-							<div style="width:40%;text-align:center"><span class="fa fa-1x" style="color:#005952;font-weight:700;">Time</span></div>
-							<div class="form-group"><input class="form-control" type="text"></div>
-						</div>
-						<div style="display:flex;margin-top:5px;">
-							<div style="width:40%;text-align:center"><span class="fa fa-1x" style="color:#005952;font-weight:700;">Type Of Pickup</span></div>
-							<div>
-								<select>
-									<option value="">Select..</option>
-									<option value="1">One Time Pickup</option>
-									<option value="2">Weekly Pickup</option>
-									<option value="3">Bi-Weekly Pickup</option>
-									<option value="4">Monthly Pickup</option>
-								</select>
+
+					<div class="container add-schedule hide-add-schedule">
+						<div class="row text-center add-schedule-day">
+							<div class="col-md-12">
+								<span id="id-add-schedule-day" class="text-uppercase"><span id="schedule-day"></span>&nbsp;<span id="schedule-month"></span></span>	
 							</div>
 						</div>
-						<div style="width:100%;text-align:center;padding-top:20px;padding-bottom:20px;">
-							<button class="btn btn-primary add" type="submit" value="Add">Add</button>
-							<button class="btn btn-default cancel" type="button" value="Cancel">Cancel</button>
+						<div class="row">&nbsp;</div>
+						<div class="row center-block">
+							<div class="col-md-1">&nbsp;</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+									<input type="text" class="form-control" placeholder="Name" id="txtName">
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="fa fa-building-o"></span></span>
+									<input type="text" class="form-control" placeholder="Flat Number, Building Name" id="txtResidenceDetails">
+								</div>
+							</div>
+							<div class="col-md-1">&nbsp;</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row center-block">
+							<div class="col-md-1">&nbsp;</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
+									<input type="text" class="form-control" placeholder="Address Line 1" id="txtAddressLine1">
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
+									<input type="text" class="form-control" placeholder="Address Line 2" id="txtAddressLine1">
+								</div>
+							</div>
+							<div class="col-md-1">&nbsp;</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row center-block">
+							<div class="col-md-1">&nbsp;</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
+									<input type="text" class="form-control" placeholder="City" id="txtCity">
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-road"></span></span>
+									<input type="text" class="form-control" placeholder="State" id="txtState">
+								</div>
+							</div>
+							<div class="col-md-1">&nbsp;</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row center-block">
+							<div class="col-md-1">&nbsp;</div>
+							<div class="col-md-5">
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+									<input type="text" class="form-control" placeholder="Phone Number" id="txtPhoneNumber">
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="input-group bootstrap-timepicker">
+									<span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
+									<input type="text" class="form-control" id="timepicker5">
+								</div>
+							</div>
+							<div class="col-md-1">&nbsp;</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row center-block">
+							<div class="col-md-2">&nbsp;</div>
+							<div class="col-md-8">
+								<div class="input-group bootstrap-timepicker">
+									<span class="input-group-addon"><span class="fa fa-truck"></span></span>
+									<select class="form-control" id="pickup_type">
+										<option value="">Type of Pickup</option>
+										<option value="1">One Time Pickup</option>
+										<optgroup label="Regular Pickup">
+											<option value="2">Weekly Pickup</option>
+											<option value="3">Bi-Weekly Pickup</option>
+											<option value="4">Monthly Pickup</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-2">&nbsp;</div>
+						</div>
+						<div class="row">&nbsp;</div>
+						<div class="row center-block">
+							<div class="col-md-4">&nbsp;</div>
+							<div class="col-md-4">
+								<button class="btn btn-primary add" style="width:80px;" type="submit" value="Add">Add</button>&nbsp;
+								<button class="btn btn-warning cancel" style="width:80px;" type="button" value="Cancel">Cancel</button>
+							</div>
+							<div class="col-md-4">&nbsp;</div>
 						</div>
 					</div>
 					<div class="event-listing">
@@ -290,6 +358,7 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
@@ -322,7 +391,6 @@
 			});
 			
 			$('.day').on('click',function(){
-
 				if(!$(this).hasClass('past')){
 					if ($(".clndr-grid").hasClass("hide-clndr-grid")) {
 						$('.clndr-grid').removeClass('hide-clndr-grid');
@@ -334,19 +402,47 @@
 					
 					if ($(".add-schedule").hasClass("hide-add-schedule")) {
 						$('.add-schedule').removeClass('hide-add-schedule');
-						$('.add-schedule').addClass('show-add-schedule')
+						$('.add-schedule').addClass('show-add-schedule new-item');
+						var day_number = $(this).find(".day-number").text();
+						var month_name = $('#month-name').text();
+									
+
+
+						$('#schedule-day').text(day_number);
+						$('#schedule-month').text(month_name);
+						$(this).addClass('event');
 					} else if ($(".add-schedule").hasClass("show-add-schedule")) {
-						$('.add-schedule').removeClass('show-add-schedule');
+						$('.add-schedule').removeClass('show-add-schedule new-item');
 						$('.add-schedule').addClass('hide-add-schedule')
 					}
 				}
-
-				
 			});
 
 
 			$('.add').on('click',function(){
-				$('.day').click();	
+				$('.event-listing').append(
+					'<div class="event-item new-item" style="display:flex">'+
+						'<div style="width:89%">'+
+							'<div class="event-item-name">'+ $('#schedule-day').text() +' - '+$('#pickup_type option:selected').text()+' - Scheduled</div>'+
+							'<div class="event-item-location">Haware Splendor, Kharghar</div>'+
+						'</div>'+
+						'<div style="width:11%">'+
+							'<span class="glyphicon glyphicon-pencil"></span>'+
+							'<span>&nbsp;</span>'+
+							'<span class="glyphicon glyphicon-remove"></span>'+
+						'</div>'+
+					'</div>'
+					);
+
+				if ($(".add-schedule").hasClass("show-add-schedule")) {
+					$('.add-schedule').removeClass('show-add-schedule');
+					$('.add-schedule').addClass('hide-add-schedule')
+				}
+
+				if ($(".clndr-grid").hasClass("hide-clndr-grid")) {
+					$('.clndr-grid').removeClass('hide-clndr-grid');
+					$('.clndr-grid').addClass('show-clndr-grid');
+				}
 			});
 
 			$('.cancel').on('click',function(){
@@ -360,7 +456,11 @@
 					$('.clndr-grid').addClass('show-clndr-grid');
 				}
 			});
-
+			$('#timepicker5').timepicker({
+                template: false,
+                showInputs: false,
+                minuteStep: 5
+            });
 			
     		/*
     		$('.day').addClass('hvr-border-fade');

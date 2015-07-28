@@ -266,9 +266,9 @@ section.success a.active {
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px #018001;
     font-size: 20px;
-    color: #fff;
+    color: #018001;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -277,9 +277,9 @@ section.success a.active {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
-    color: #9B92EA;
-    background: #fff;
+    border: solid 2px #199DDE;
+    color: #FFFFFF;
+    background: #199DDE;
 }
 
 .floating-label-form-group {
@@ -364,7 +364,7 @@ footer .footer-below {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid #018001;
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
@@ -520,12 +520,12 @@ footer .footer-below {
 }
 
 .text-important {
-  color: darkred;
+  color: #018001;
 }
 
 .btn-important {
   color: #ffffff;
-  background-color: darkred;
+  background-color: #199DDE;
   border-color: transparent;
 }
 .btn-important:hover,
@@ -535,7 +535,7 @@ footer .footer-below {
 .btn-important.active,
 .open > .dropdown-toggle.btn-important {
   color: #ffffff;
-  background-color: #c9302c;
+  background-color: #199DDE;
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-important:active,
@@ -561,11 +561,11 @@ fieldset[disabled] .btn-important:active,
 .btn-important.disabled.active,
 .btn-important[disabled].active,
 fieldset[disabled] .btn-important.active {
-  background-color: darkred;
+  background-color: #199DDE;
   border-color: transparent;
 }
 .btn-important .badge {
-  color: darkred;
+  color: #199DDE;
   background-color: #ffffff;
 }
 
@@ -576,3 +576,21 @@ fieldset[disabled] .btn-important.active {
 }
 
 
+.panel-primary {
+  border-color: #1BBB45;
+}
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #1BBB45;
+  border-color: #1BBB45;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #1BBB45;
+}
+.panel-primary > .panel-heading .badge {
+  color: #005952;
+  background-color: #1BBB45;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #1BBB45;
+}

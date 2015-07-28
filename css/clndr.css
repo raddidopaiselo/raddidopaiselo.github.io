@@ -94,7 +94,7 @@
 	  background-position: right bottom;
 	  background-repeat: no-repeat;
 	  color: black;
-	  background-color: none;
+	  background-color: #8B8B8B;
 	}
 
 	#full-clndr .clndr-grid .days .day.event .day-number,
@@ -437,6 +437,40 @@
 	#id-add-schedule-day{
 		font-size:20px;
 		font-weight: 700;
+	}
+
+
+	.col-xs-15,
+	.col-sm-15,
+	.col-md-15,
+	.col-lg-15 {
+    	position: relative;
+    	min-height: 1px;
+    	padding-right: 10px;
+    	padding-left: 10px;
+	}
+
+	.col-xs-15 {
+	    width: 14.28%;
+	    float: left;
+	}
+	@media (min-width: 768px) {
+	.col-sm-15 {
+	        width: 14.28%;
+	        float: left;
+	    }
+	}
+	@media (min-width: 992px) {
+	    .col-md-15 {
+	        width: 14.28%;
+	        float: left;
+	    }
+	}
+	@media (min-width: 1200px) {
+	    .col-lg-15 {
+	        width: 14.28%;
+	        float: left;
+	    }
 	}
 
 	/*
